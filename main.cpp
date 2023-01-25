@@ -26,7 +26,7 @@ int main(){
     cout << "enter the operator you would like to check in binary\n**";
     cin >> binaryOperator;
 
-    //this code will be to essentially hardcode the inputs, since thats how all inputs are anyways, and its easier :)
+    //this code will be to essentially hardcode the inputs, since thats how all inputs are anyways
     //populates array without the need of an input file, just need the operator we are testing (and the number of inputs)
     int inputs = (cols>>1)-1;   //half of the columns and minus the one output column
     string inputStr;
@@ -53,8 +53,6 @@ int main(){
     }
 */
 
-    //maybe we can include some error checking later
-
     //get the output file ready to be written to...
     string filename = binaryOperator+"outputs.txt";
     outfile.open(filename.c_str());
@@ -65,7 +63,9 @@ int main(){
     bool badMatch = 0;
     int onesCount = 0;
 
-    //now we want to calculate every possible combination :(
+    //now we want to calculate every possible combination
+
+  // in the future we can expand the below to call n-many for loops to correspond to n-many inputs for our function
     //selects our three input columns, going through all possible combinations of input columns
     for(int i = 0; i < cols; i++){
         for(int j = 0; j < cols; j++){
